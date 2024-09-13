@@ -212,7 +212,11 @@ FORM pai.
 
   CASE ok_code.
     WHEN 'BACK' OR 'EXIT' OR 'CANCEL'.
-      CALL METHOD go_container->free.
+      go_container->free(
+        EXCEPTIONS
+          cntl_error        = 1
+          cntl_system_error = 2
+          OTHERS            = 3 ).
       LEAVE TO SCREEN 0.
     WHEN 'GO_TO_SLIN'.
       ls_bdcdata-program = gv_program.
