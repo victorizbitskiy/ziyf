@@ -1,10 +1,10 @@
 FUNCTION-POOL ziyf.                         "MESSAGE-ID ..
 
 TYPES:
-  BEGIN OF gty_parse_result,
+  BEGIN OF ty_parse_result,
     errors   TYPE i,
     warnings TYPE i,
-  END OF gty_parse_result.
+  END OF ty_parse_result.
 
 DATA ok_code LIKE sy-ucomm.
 DATA gv_program TYPE slin_program_name.

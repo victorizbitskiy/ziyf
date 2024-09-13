@@ -7,7 +7,7 @@ FORM pbo.
 
   DATA lv_picture_name TYPE w3objid.
   DATA ls_result_stat TYPE slin_result_stat.
-  DATA ls_parse_result TYPE gty_parse_result.
+  DATA ls_parse_result TYPE ty_parse_result.
 
   PERFORM set_pf_status_and_titlebar.
   PERFORM set_invisible USING lc_go_to_slin_button_name '0'.
@@ -58,7 +58,7 @@ FORM extended_program_check USING iv_program TYPE slin_program_name
 
 ENDFORM.
 
-FORM set_pf_status_and_titlebar .
+FORM set_pf_status_and_titlebar.
   SET PF-STATUS '0200'.
   SET TITLEBAR '0200'.
 ENDFORM.
@@ -76,7 +76,7 @@ FORM set_invisible USING iv_fieldname TYPE screen-name
 ENDFORM.
 
 FORM parse_program_check_result USING is_result_stat TYPE slin_result_stat
-                                CHANGING cs_result TYPE gty_parse_result.
+                                CHANGING cs_result TYPE ty_parse_result.
 
   DATA ls_set LIKE LINE OF is_result_stat-set.
 
@@ -87,7 +87,7 @@ FORM parse_program_check_result USING is_result_stat TYPE slin_result_stat
 
 ENDFORM.
 
-FORM set_info_fields USING is_parse_result TYPE gty_parse_result
+FORM set_info_fields USING is_parse_result TYPE ty_parse_result
                      CHANGING cv_errors_info TYPE string
                               cv_warnings_info TYPE string.
 
@@ -102,7 +102,7 @@ FORM set_info_fields USING is_parse_result TYPE gty_parse_result
 
 ENDFORM.
 
-FORM get_picture_name USING is_parse_result TYPE gty_parse_result
+FORM get_picture_name USING is_parse_result TYPE ty_parse_result
                       CHANGING cv_picture_name TYPE w3objid.
 
   CONSTANTS:
@@ -161,7 +161,7 @@ ENDFORM.
 FORM load_picture USING iv_picture_name TYPE w3objid.
 
   DATA lv_url TYPE cndp_url.
-  DATA picture_control TYPE REF TO cl_gui_picture.
+  DATA lo_picture_control TYPE REF TO cl_gui_picture.
 
   CALL FUNCTION 'DP_PUBLISH_WWW_URL'
     EXPORTING
@@ -183,33 +183,24 @@ FORM load_picture USING iv_picture_name TYPE w3objid.
       EXCEPTIONS
         cntl_error        = 1
         cntl_system_error = 2
-        OTHERS            = 3
-    ).
+        OTHERS            = 3 ).
   ENDIF.
 
-  IF picture_control IS BOUND.
-    picture_control->free(
+  IF lo_picture_control IS BOUND.
+    lo_picture_control->free(
       EXCEPTIONS
         cntl_error        = 1
         cntl_system_error = 2
-        OTHERS            = 3
-    ).
-
+        OTHERS            = 3 ).
   ENDIF.
 
   CREATE OBJECT go_container
     EXPORTING
       container_name = 'PICTURE_CONTROL'.
 
-  CREATE OBJECT picture_control EXPORTING parent = go_container.
-
-  CALL METHOD picture_control->load_picture_from_url_async
-    EXPORTING
-      url = lv_url.
-
-  CALL METHOD picture_control->set_display_mode
-    EXPORTING
-      display_mode = cl_gui_picture=>display_mode_stretch.
+  CREATE OBJECT lo_picture_control EXPORTING parent = go_container.
+  lo_picture_control->load_picture_from_url_async( lv_url ).
+  lo_picture_control->set_display_mode( cl_gui_picture=>display_mode_stretch ).
 
 ENDFORM.
 
@@ -230,7 +221,7 @@ FORM pai.
       APPEND ls_bdcdata TO lt_bdcdata.
 
       TRY.
-          CALL TRANSACTION 'SLIN' USING lt_bdcdata.
+          CALL TRANSACTION 'SLIN' WITH AUTHORITY-CHECK USING lt_bdcdata.
         CATCH cx_root INTO lx_root.
           lx_root->get_text( ).
       ENDTRY.
