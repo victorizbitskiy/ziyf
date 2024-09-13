@@ -1,4 +1,4 @@
-FUNCTION ZIYF.
+FUNCTION ziyf.
 *"----------------------------------------------------------------------
 *"*"Local Interface:
 *"  IMPORTING
