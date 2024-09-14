@@ -23,3 +23,9 @@ To configure the extension, use the following SET/GET parameters (**su3** tcode)
 This extension was made for non-profit, educational purposes. Faces are only used as an example.  
 All rights and credit go directly to its rightful owners.  
 
+---
+
+<p align="left">Don't forget to click ⭐ if you like it!<p>
+
+---
+
