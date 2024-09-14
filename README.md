@@ -8,7 +8,7 @@ There are two options for choosing a face: [Doomguy](https://en.wikipedia.org/wi
 
 ![Loading...](https://github.com/victorizbitskiy/ziyf/blob/main/docs/img/demo_doomguy.gif)
 
-**Mr.Incredible:**
+**Mr. Incredible:**
 
 ![Loading...](https://github.com/victorizbitskiy/ziyf/blob/main/docs/img/demo_mr_incredible.gif)
 
