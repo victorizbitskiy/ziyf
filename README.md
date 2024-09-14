@@ -14,7 +14,9 @@ There are two options for choosing a face: [Doomguy](https://en.wikipedia.org/wi
 **Mr. Incredible:**
 
 ![Loading...](https://github.com/victorizbitskiy/ziyf/blob/main/docs/img/demo_mr_incredible.gif)
-<progress value="0" max="100" style="width:300px; height:20px;"></progress>
+<div>
+  <progress value="0" max="100" style="width:300px; height:20px;"></progress>
+</div>
 
 ## Settings
 To configure the extension, use the following SET/GET parameters (**su3** tcode):
