@@ -21,6 +21,10 @@ To configure the extension, use the following SET/GET parameters (**su3** tcode)
 | ZIYF                        | On (X) or Off('')                                                   |
 | ZIYF_FACE                   | Mr. Incredible (1) or Doomguy (2)                                   |
 
+## Installation
+
+Installation is done with [abapGit](http://www.abapgit.org).
+
 ## Got questions?
 If you have questions or general suggestions, don't hesitate to submit a new [(GitHub issue)](https://github.com/victorizbitskiy/ziyf/issues/new).
 
