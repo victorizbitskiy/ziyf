@@ -8,11 +8,11 @@ There are two options for choosing a face: [Doomguy](https://en.wikipedia.org/wi
 
 **Doomguy:**  
 
-![Loading...](https://github.com/victorizbitskiy/ziyf/blob/main/docs/img/demo_doomguy.gif)
+![Loading...](docs/img/demo_doomguy.gif)
 
 **Mr. Incredible:**
 
-![Loading...](https://github.com/victorizbitskiy/ziyf/blob/main/docs/img/demo_mr_incredible.gif)
+![Loading...](demo_mr_incredible.gif)
 
 ## Settings
 To configure the extension, use the following SET/GET parameters (**su3** tcode):
