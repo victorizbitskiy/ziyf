@@ -1,5 +1,7 @@
 ## `In Your Face`
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/victorizbitskiy/zconcurrency_api/blob/main/LICENSE)
+
 This is the ABAP implementation of the [In Your Face](https://github.com/virejdasani/InYourFace)  VS Code extension for the ABAP Editor.  
 
 There are two options for choosing a face: [Doomguy](https://en.wikipedia.org/wiki/Doomguy) or [Mr.Incredible](https://en.wikipedia.org/wiki/Mr._Incredible). You can choose the face that you like better.  
