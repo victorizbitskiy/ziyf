@@ -1,6 +1,8 @@
 ## `In Your Face`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/victorizbitskiy/zconcurrency_api/blob/main/LICENSE)
+![ABAP 7.00+](https://img.shields.io/badge/ABAP-7.00%2B-brightgreen)
+[![Code Statistics](https://img.shields.io/badge/CodeStats-abaplint-blue)](https://abaplint.app/stats/victorizbitskiy/ziyf)
 
 This is the ABAP implementation of the [In Your Face](https://github.com/virejdasani/InYourFace)  VS Code extension for the ABAP Editor.  
 
