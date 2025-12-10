@@ -6,6 +6,12 @@
 
 This is the ABAP implementation of the [In Your Face](https://github.com/virejdasani/InYourFace)  VS Code extension for the ABAP Editor.  
 
+---
+
+<p align="left">Don't forget to click ⭐ if you like it!<p>
+
+---
+
 There are two options for choosing a face: [Doomguy](https://en.wikipedia.org/wiki/Doomguy) or [Mr.Incredible](https://en.wikipedia.org/wiki/Mr._Incredible). You can choose the face that you like better.  
 
 **Doomguy:**  
@@ -33,10 +39,3 @@ If you have questions or general suggestions, don't hesitate to submit a new [(G
 ## Legal disclaimer
 This extension was made for non-profit, educational purposes. Faces are only used as an example.  
 All rights and credit go directly to its rightful owners.  
-
----
-
-<p align="left">Don't forget to click ⭐ if you like it!<p>
-
----
-
